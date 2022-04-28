@@ -1,0 +1,30 @@
+<h2>Let's create an exciting Event</h2>
+
+<form method="post" action="/events/create">
+
+  <label>Title</label>
+  <input name="title" value="This is the event" />
+  <label>Description</label>
+  <input name="description" value="This is super awesome event" />
+  <p>describbe details of your events here so that eveyone can understand what is this event all about</p>
+  <label>Location</label>
+  <input name="address" value="21 Miani Ave" />
+  <label>City</label>
+  <input name="city" value="Miami" />
+  <label>State</label>
+  <input name="state" value="FL" />
+  <label>Zip Code</label>
+  <input name="zipCode" value="33128" />
+
+  {{!-- <label>Event Poster</label>
+  <input name="imageUrl" /> --}}
+  <label>Type of Event</label>
+  <input name="eventType" />
+  <label>Total Spots</label>
+  <input name="totalSpots" value="20" />
+
+
+  <button type="submit">Create Event</button>
+</form>
+
+<p>{{message}}</p>

@@ -1,0 +1,17 @@
+<h2>my contacts</h2>
+<a href="/contacts/add">add a new contact</a>
+{{message}}
+
+{{#each allContacts}}
+<h2>{{this.firstName}} {{this.lastName}}</h2>
+  <p>{{this.email}}</p>
+  <p>{{this.phoneNumber}}</p>
+{{/each}}
+
+
+
+
+
+
+
+

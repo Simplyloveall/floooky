@@ -1,0 +1,14 @@
+<h2>Events I created or attending</h2>
+
+<div class="centre-align feed-border">
+{{#each allEvents}}
+  <img width="400" height="300" src="{{this.imageUrl}}" alt="event-pic" />
+  <p>{{this.name}}</p>
+  <p>{{this.description}}</p>
+  <a href="/events/{{this._id}}/edit"> Edit this Event</a>
+  <form method="post" action="/events/{{this._id}}/delete">
+    <button class="btn-submit btn-color-red" type="submit">Delete Event</button>
+  
+  </form>
+{{/each}}
+</div>
