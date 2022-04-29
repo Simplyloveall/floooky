@@ -60,7 +60,15 @@ router.get("/all", (req, res) => {
     });
 });
 
-router.get("/my-events", isLoggedIn, (req, res) => {
+router.get("/my-events", isLoggedIn, async function (req, res, next) {
+  await Event.find({ owner: req.session.user._id })
+    .cursor()
+    .eachAsync(function (myEvents) {
+      myEvents.availableSpots = myEvents.totalSpots - myEvents.attendees.length;
+
+      return myEvents.save();
+    });
+
   Event.find({ owner: req.session.user._id })
     .then((allEvents) => {
       res.render("my-events", { allEvents: allEvents });
@@ -101,6 +109,31 @@ router.post("/:id/delete", isLoggedIn, (req, res) => {
     })
     .catch(() => {
       res.redirect("/events/my-events");
+    });
+});
+
+router.get("/:id/rsvp", isLoggedIn, (req, res) => {
+  Event.findById(req.params.id)
+    .then((foundEvent) => {
+      res.render("rsvp", { foundEvent: foundEvent });
+    })
+    .catch((error) => {
+      console.log("failed", error.message);
+    });
+});
+
+router.post("/:id/confirm", isLoggedIn, (req, res) => {
+  Event.findByIdAndUpdate(
+    { _id: req.params.id },
+    {
+      $addToSet: { attendees: req.session.user },
+    }
+  )
+    .then(() => {
+      res.redirect("/events/my-events");
+    })
+    .catch(() => {
+      res.redirect("/");
     });
 });
 

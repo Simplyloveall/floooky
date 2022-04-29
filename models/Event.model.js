@@ -27,7 +27,19 @@ const eventSchema = new Schema({
       "experience",
     ],
   },
+  eventDate: {
+    type: String,
+  },
+  startTime: {
+    type: String,
+  },
+  endTime: {
+    type: String,
+  },
   totalSpots: {
+    type: Number,
+  },
+  availableSpots: {
     type: Number,
   },
   attendees: {

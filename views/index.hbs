@@ -1,64 +1,67 @@
 <div class="centre-align">
-<h4>check out and join the events happening aroud you</h4>
-<p>welome to the world of possibilities... clicks away!</p>
-
+  <h4>check out and join the events happening aroud you</h4>
+  <p>welome to the world of possibilities... clicks away!</p>
 
 </div>
 
 <div class="wrapper centre-align">
-	
- 	{{!-- <div class="search-icon"><i class="fa-solid fa-magnifying-glass-arrow-right fa-beat-fade"></i></div>
+
+  {{! <div class="search-icon"><i class="fa-solid fa-magnifying-glass-arrow-right fa-beat-fade"></i></div>
  	<input placeholder="search exciting events here..." type="text" class="search">
-	<button class="btn-submit">search<i class="fa-solid fa-magnifying-glass-arrow-right fa-beat-fade"></i></button> --}}
-	<div class="search-icon"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></div>
-<input placeholder="search exciting events here..." type="text" class="search">
-<button>
-<i class="fa-solid fa-square-up-right fa-beat" style="--fa-beat-scale: 2.0;"></i></button>
+	<button class="btn-submit">search<i class="fa-solid fa-magnifying-glass-arrow-right fa-beat-fade"></i></button> }}
+  <div class="search-icon"><i
+      class="fa-solid fa-magnifying-glass-arrow-right"
+    ></i></div>
+  <input
+    placeholder="search exciting events here..."
+    type="text"
+    class="search"
+  />
+  <button>
+    <i
+      class="fa-solid fa-square-up-right fa-beat"
+      style="--fa-beat-scale: 2.0;"
+    ></i></button>
 
 </div>
-{{!-- <input type="text" placeholder="">
-<button>filter by event types - dates - date range - location</button> --}}
-
-
+{{! <input type="text" placeholder="">
+<button>filter by event types - dates - date range - location</button> }}
 
 <div class="centre-align feed-border">
-{{#each allEvents}}
-<h3>Event by {{this.owner.firstName}}</h3> 
-  <img width="630" height="auto" src="{{this.imageUrl}}" alt="event-poster" />
-  <p class="event-title">{{this.title}}</p>
-  <p>{{this.description}}</p>
-<br>
-<hr>
-{{/each}} 
+  {{#each allEvents}}
+    <h3>Event by {{this.owner.firstName}}</h3>
+    <img width="630" height="auto" src="{{this.imageUrl}}" alt="event-poster" />
+    <p class="event-title">{{this.title}}</p>
+    <p>{{this.description}}</p>
+    <a href="/contacts/my-contacts">
+      <span style="font-size: 3em; color: Tomato;">
+        <i class="fa-solid fa-share-nodes"></i>
+      </span>
+    </a>
+    <a href="/events/{{this._id}}/rsvp">rsvp</a>
+
+    <br />
+    <hr />
+  {{/each}}
 </div>
 
-
+{{! <div>
+  <h2>Join me to do ...</h2>
+  <p>create an experience to lead and share with people</p>
+</div>
 
 <div>
-<h2>Join me to do ...</h2>
-        <p>create an experience to lead and share with people</p>
+  <h2>Search for experiences hosted by others in your area</h2>
+  <p>find exciting happenings near you</p>
 </div>
 
 <div>
-<h2>Search for experiences hosted by others in your area</h2>
-        <p>find exciting happenings near you</p>
+  enter an enticing title and let's create your event use typeform button
 </div>
-
-
-
-<div>
-	enter an enticing title and let's create your event
-	use typeform
-	button
-</div>
-
 
 <div>
 
-	events list
-	poster - select from the list, upload your own
-	title- will over impose on teh photo
-	description at the bottom - with link to more
-	Start date - State time - Duration
-	total spots - available spots
-</div>
+  events list poster - select from the list, upload your own title- will over
+  impose on teh photo description at the bottom - with link to more Start date -
+  State time - Duration total spots - available spots
+</div> }}

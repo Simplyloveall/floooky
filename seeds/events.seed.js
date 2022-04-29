@@ -17,6 +17,9 @@ const events = [
       "https://cdn.vox-cdn.com/thumbor/oMCdIG4kyMWBBHu_0wBulHtd-xI=/0x0:4755x3170/2120x1413/filters:focal(2222x669:2982x1429):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69251380/959269384.0.jpg",
     eventType: "outdoor-activity",
     totalSpots: "20",
+    eventDate: "May 18, 2022",
+    startTime: "5:30pm",
+    endTime: "8:00pm",
   },
   {
     title: "Bar hopping in Brickell",
@@ -30,6 +33,9 @@ const events = [
       "https://drunkard.com/wp-content/uploads/2015/04/bar-hopping-hdr.jpg",
     eventType: "social",
     totalSpots: "16",
+    eventDate: "May 13, 2022",
+    startTime: "9:00pm",
+    endTime: "2:00am",
   },
   {
     title: "A dinner to remember",
@@ -43,6 +49,9 @@ const events = [
       "https://i.insider.com/55ba73262acae732118bb6fa?width=2000&format=jpeg&auto=webp",
     eventType: "food",
     totalSpots: "8",
+    eventDate: "May 05, 2022",
+    startTime: "7:30pm",
+    endTime: "10:30pm",
   },
   {
     title: "let's laugh together",
@@ -55,6 +64,9 @@ const events = [
     imageUrl: "https://media.timeout.com/images/105229306/1372/772/image.jpg",
     eventType: "experience",
     totalSpots: "20",
+    eventDate: "Apr 30, 2022",
+    startTime: "6:30pm",
+    endTime: "9:00pm",
   },
   {
     title: "Social evening with Ironhackers",
@@ -68,6 +80,9 @@ const events = [
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F272871049%2F268702284101%2F1%2Foriginal.20220425-204912?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C37%2C1200%2C600&s=8e6709032c5da0a91b4b489ed69f4a7e",
     eventType: "social",
     totalSpots: "60",
+    eventDate: "April 29, 2022",
+    startTime: "6:30pm",
+    endTime: "10:00pm",
   },
   {
     title: "Movie night",
@@ -81,6 +96,9 @@ const events = [
       "https://upload.wikimedia.org/wikipedia/en/f/fe/No_Time_to_Die_poster.jpg",
     eventType: "night-out",
     totalSpots: "12",
+    eventDate: "May 27, 2022",
+    startTime: "6:00pm",
+    endTime: "9:00pm",
   },
 ];
 

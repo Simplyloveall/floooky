@@ -4,6 +4,7 @@
   <img width="400" height="300" src="{{this.imageUrl}}" alt="event-poster" />
   <p>{{this.title}}</p>
   <p>{{this.description}}</p>
-{{!-- //created by// --}}
-<p>Created by {{this.owner}}</p> 
+  {{! //created by// }}
+  <p>Created by {{this.owner}}</p>
+  <a href="/{{this._id}}/rsvp"></a>
 {{/each}}

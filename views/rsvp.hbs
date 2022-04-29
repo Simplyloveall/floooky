@@ -1,0 +1,11 @@
+<p>rsvp page</p>
+
+<p>{{foundEvent.title}}</p>
+<p>{{foundEvent.description}}</p>
+<p>{{foundEvent.imageUrl}}</p>
+
+<form action="/events/{{foundEvent._id}}/confirm" method="post">
+
+  <button type="submit">Yes, I will attend</button>
+
+</form>

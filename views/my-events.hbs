@@ -1,14 +1,47 @@
-<h2>Events I created or attending</h2>
+<div class="centre-align">
+  <h2>Events I created or attending</h2>
+
+  <a href="/events/create">let's create an event</a>
+</div>
+
+<div class="wrapper centre-align">
+
+  <div class="search-icon"><i
+      class="fa-solid fa-magnifying-glass-arrow-right"
+    ></i></div>
+  <input
+    placeholder="search exciting events here..."
+    type="text"
+    class="search"
+  />
+  <button>
+    <i
+      class="fa-solid fa-square-up-right fa-beat"
+      style="--fa-beat-scale: 2.0;"
+    ></i></button>
+
+</div>
 
 <div class="centre-align feed-border">
-{{#each allEvents}}
-  <img width="400" height="300" src="{{this.imageUrl}}" alt="event-pic" />
-  <p>{{this.name}}</p>
-  <p>{{this.description}}</p>
-  <a href="/events/{{this._id}}/edit"> Edit this Event</a>
-  <form method="post" action="/events/{{this._id}}/delete">
-    <button class="btn-submit btn-color-red" type="submit">Delete Event</button>
-  
-  </form>
-{{/each}}
+  {{#each allEvents}}
+    <h3>Event by {{this.owner.firstName}}</h3>
+    <img width="630" height="auto" src="{{this.imageUrl}}" alt="event-poster" />
+    <p class="event-title">{{this.title}}</p>
+    <p>{{this.description}}</p>
+
+    <p>{{this.availableSpots}} spots left</p>
+
+    <form method="get" action="/events/{{this._id}}/edit">
+      <button class="btn-submit yellow" type="submit">Edit Event</button>
+    </form>
+
+    <form method="post" action="/events/{{this._id}}/delete">
+      <button class="btn-submit btn-color-red" type="submit">Delete Event</button>
+
+    </form>
+    <a class="rsvvp" href="/events/{{this._id}}/rsvp">rsvp</a>
+
+    <br />
+    <hr />
+  {{/each}}
 </div>

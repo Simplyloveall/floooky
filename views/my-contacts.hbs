@@ -1,17 +1,27 @@
-<h2>my contacts</h2>
-<a href="/contacts/add">add a new contact</a>
-{{message}}
+<div class="centre-align">
+  <h2>myContacts</h2>
+  <a href="/contacts/add">add a new contact</a>
+  {{message}}
+</div>
 
-{{#each allContacts}}
-<h2>{{this.firstName}} {{this.lastName}}</h2>
-  <p>{{this.email}}</p>
-  <p>{{this.phoneNumber}}</p>
-{{/each}}
+<div class="centre-align feed-border">
+  {{#each allContacts}}
+    <h2>{{this.firstName}} {{this.lastName}}</h2>
+    <p>{{this.email}}</p>
+    <p>{{this.phoneNumber}}</p>
+    <hr style="width:70%" , size="2" , color="#ffbf00" />
 
+    {{!-- <a href="/contacts/{{this._id}}/edit">Edit Contact</a> --}}
 
+    <form method="get" action="/contacts/{{this._id}}/edit">
+      <button class="btn-submit yellow" type="submit">Edit Contact</button>
+    </form>
 
+    <form method="post" action="/contacts/{{this._id}}/delete">
+      <button class="btn-submit btn-color-red" type="submit">Delete Contact</button>
+    </form>
 
+    <hr style="width:100%" , size="6" , color="#f39c9c" />
 
-
-
-
+  {{/each}}
+</div>
